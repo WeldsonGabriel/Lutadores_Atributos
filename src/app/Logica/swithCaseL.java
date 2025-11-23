@@ -9,34 +9,45 @@ public class swithCaseL {
         System.out.println("Digite o número do dia da semana (1-7): ");
         int dia = scanner.nextInt(); scanner = new Scanner(System.in);
 
-        String nomeDia;
+        // switch case simplificado usando expressão switch
+        // mais simples e limpo
 
-        switch (dia) {
-            case 1:
-                nomeDia = "Domingo";
-                break;
-            case 2:
-                nomeDia = "Segunda-feira";
-                break;
-            case 3:
-                nomeDia = "Terça-feira";
-                break;
-            case 4:
-                nomeDia = "Quarta-feira";
-                break;
-            case 5:
-                nomeDia = "Quinta-feira";
-                break;
-            case 6:
-                nomeDia = "Sexta-feira";
-                break;
-            case 7:
-                nomeDia = "Sábado";
-                break;
-            default:
-                nomeDia = "Dia inválido";
-                break;
-        }
+        String nomeDia = switch (dia) {
+            case 1 -> "Domingo";
+            case 2 -> "Segunda-feira";
+            case 3 -> "Terça-feira";
+            case 4 -> "Quarta-feira";
+            case 5 -> "Quinta-feira";
+            case 6 -> "Sexta-feira";
+            case 7 -> "Sábado";
+            default -> "Dia inválido";
+        };
+        //switch (dia) {
+        //    case 1:
+        //        nomeDia = "Domingo";
+        //        break;
+        //    case 2:
+        //        nomeDia = "Segunda-feira";
+        //        break;
+        //    case 3:
+        //        nomeDia = "Terça-feira";
+        //        break;
+        //    case 4:
+        //        nomeDia = "Quarta-feira";
+        //        break;
+        //    case 5:
+        //        nomeDia = "Quinta-feira";
+        //        break;
+        //    case 6:
+        //        nomeDia = "Sexta-feira";
+        //        break;
+        //    case 7:
+        //        nomeDia = "Sábado";
+        //        break;
+        //    default:
+        //        nomeDia = "Dia inválido";
+        //        break;
+        //}
 
         System.out.println("O dia da semana é: " + nomeDia);
     }

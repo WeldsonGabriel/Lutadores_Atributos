@@ -19,6 +19,8 @@ public class ifElseEstrutura {
         var temDinheiro = true;
         var temCartao = false;
 
+        var mensagem = (temDinheiro || temCartao) ? "Pode comprar o produto" : "Não pode comprar nada";
+        System.out.println(mensagem);
         if(temDinheiro && temCartao){
             System.out.println("Pode comprar o produto  e um brinde");
         }else if (temDinheiro || temCartao){
