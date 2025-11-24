@@ -12,14 +12,36 @@ public class swithCaseL {
         // switch case simplificado usando expressão switch
         // mais simples e limpo
 
-        String poderAvatar = switch (dia) {
-            case 1,2 -> "Àgua";
-            case 3 -> "Fogo";
-            case 4 -> "Ar";
-            case 5,6 -> "Terra";
-            case 7 -> "Espírito";
-            default -> "Poder desconhecido";
-        };
+        //String poderAvatar = switch (dia) {
+        //    case 1,2 -> "Àgua";
+        //    case 3 -> "Fogo";
+        //    case 4 -> "Ar";
+        //    case 5,6 -> "Terra";
+        //    case 7 -> "Espírito";
+        //    default -> "Poder desconhecido";
+        //};
+
+        var listaPersonagens = new java.util.HashMap<Integer, String>();
+        listaPersonagens.put(1, "Aang");
+        listaPersonagens.put(2, "Katara");
+        listaPersonagens.put(3, "Zuko");
+        listaPersonagens.put(4, "Toph");
+        listaPersonagens.put(5, "Sokka");
+        listaPersonagens.put(6, "Appa");
+        listaPersonagens.put(7, "Momo");
+
+        var listaDobras = new java.util.HashMap<String, String>();
+        listaDobras.put("Aang", "Ar, Água, Terra, Fogo");
+        listaDobras.put("Katara", "Água");
+        listaDobras.put("Zuko", "Fogo");
+        listaDobras.put("Toph", "Terra");
+        listaDobras.put("Sokka", "Nenhuma");
+        listaDobras.put("Appa", "Nenhuma");
+        listaDobras.put("Momo", "Nenhuma");
+
+        var escolhaPersonagem = listaPersonagens.get(dia);
+        var dobraPersonagem = listaDobras.get(escolhaPersonagem);
+        System.out.println("O personagem do dia é: " + escolhaPersonagem + " que dobra: " + dobraPersonagem);
 
         //String nomeDia = switch (dia) {
         //    case 1 -> "Domingo";
@@ -58,6 +80,6 @@ public class swithCaseL {
         //        break;
         //}
 
-        System.out.println("O poder do Avatar " + dia + " é: " + poderAvatar);
+        //System.out.println("O poder do Avatar " + dia + " é: " + poderAvatar);
     }
 }
