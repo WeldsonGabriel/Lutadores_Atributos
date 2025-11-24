@@ -12,16 +12,25 @@ public class swithCaseL {
         // switch case simplificado usando expressão switch
         // mais simples e limpo
 
-        String nomeDia = switch (dia) {
-            case 1 -> "Domingo";
-            case 2 -> "Segunda-feira";
-            case 3 -> "Terça-feira";
-            case 4 -> "Quarta-feira";
-            case 5 -> "Quinta-feira";
-            case 6 -> "Sexta-feira";
-            case 7 -> "Sábado";
-            default -> "Dia inválido";
+        String poderAvatar = switch (dia) {
+            case 1,2 -> "Àgua";
+            case 3 -> "Fogo";
+            case 4 -> "Ar";
+            case 5,6 -> "Terra";
+            case 7 -> "Espírito";
+            default -> "Poder desconhecido";
         };
+
+        //String nomeDia = switch (dia) {
+        //    case 1 -> "Domingo";
+        //    case 2 -> "Segunda-feira";
+        //    case 3 -> "Terça-feira";
+        //    case 4 -> "Quarta-feira";
+        //    case 5 -> "Quinta-feira";
+        //    case 6 -> "Sexta-feira";
+        //    case 7 -> "Sábado";
+        //    default -> "Dia inválido";
+        //};
         //switch (dia) {
         //    case 1:
         //        nomeDia = "Domingo";
@@ -49,6 +58,6 @@ public class swithCaseL {
         //        break;
         //}
 
-        System.out.println("O dia da semana é: " + nomeDia);
+        System.out.println("O poder do Avatar " + dia + " é: " + poderAvatar);
     }
 }

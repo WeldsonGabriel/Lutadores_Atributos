@@ -2,31 +2,40 @@ package app.Logica;
 
 public class ifElseEstrutura {
     public static void main(String[] args) {
-         // colocar o scaner para perguntar o numero ao usuario
-        //java.util.Scanner scanner = new java.util.Scanner(System.in);
-        //System.out.print("Digite um número inteiro: ");
-        //int numero = scanner.nextInt();
-        //scanner.close();
-//
-        //if (numero > 0) {
-        //    System.out.println(numero + " é um número positivo.");
-        //} else if (numero < 0) {
-        //    System.out.println(numero + " é um número negativo.");
-        //} else {
-        //    System.out.println("O número é zero.");
-        //}
+        var nome = "João";
+        var altura = 1.95;
+        var peso = 92.0;
 
-        var temDinheiro = true;
-        var temCartao = false;
+        if (peso <= 60 || altura <= 1.75) {
+            System.out.println(nome + " esta categoria é: Peso leve");
+        } else if (peso > 60 && peso <= 90 || altura > 1.75 && altura <= 1.90) {
+            System.out.println(nome + " esta categoria é: Peso médio");
+        } else {
+            System.out.println(nome + " esta categoria é: Peso pesado");
+        }
 
-        var mensagem = (temDinheiro || temCartao) ? "Pode comprar o produto" : "Não pode comprar nada";
-        System.out.println(mensagem);
-        if(temDinheiro && temCartao){
-            System.out.println("Pode comprar o produto  e um brinde");
-        }else if (temDinheiro || temCartao){
-            System.out.println("Pode comprar o produto");
-        }else{
-            System.out.println("Não pode comprar nada");
+        var idade = 20;
+        if (idade < 18) {
+            System.out.println(nome + " é menor de idade.");
+        } else {
+            System.out.println(nome + " é maior de idade.");
+        }
+        var salarioGerente = 2500;
+        var salarioLider = 2000;
+        var salarioPeao = 1500;
+        var salarioDono = 3000;
+
+        var maiorSalario = 2000;
+
+            if (maiorSalario == salarioPeao) {
+                System.out.println("O funcionário é um Peão.");
+            } else if (maiorSalario == salarioLider) {
+                System.out.println("O funcionário é um Líder.");
+            } else if (maiorSalario == salarioGerente) {
+                System.out.println("O funcionário é um Gerente.");
+            } else {
+                System.out.println("O funcionário é o Dono.");
+            }
         }
     }
-}
+
